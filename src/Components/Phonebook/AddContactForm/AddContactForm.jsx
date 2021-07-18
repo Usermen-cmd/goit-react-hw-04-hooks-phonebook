@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 //Utils
 import DisplayingErrorMessagesSchema from 'utils/validationInput';
 import { Formik } from 'formik';
@@ -48,6 +48,11 @@ const AddContactForm = ({ submit, children }) => {
       )}
     </>
   );
+};
+
+AddContactForm.propTypes = {
+  submit: PropTypes.func.isRequired,
+  children: PropTypes.bool,
 };
 
 export default AddContactForm;
